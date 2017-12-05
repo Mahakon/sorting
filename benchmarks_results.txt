@@ -1,0 +1,14 @@
+Benchmark                      Mode  Cnt  Score   Error  Units
+HeapSortBench.measureHeapSort  avgt    5  8,827 ± 0,408  us/op
+
+Benchmark                              Mode  Cnt  Score   Error  Units
+CountingSortBench.measureCountingSort  avgt    5  4,849 ± 0,279  us/op
+
+Benchmark                        Mode  Cnt   Score   Error  Units
+MergeSortBench.measureMergeSort  avgt    5  15,791 ± 0,530  us/op
+
+Benchmark                          Mode  Cnt  Score   Error  Units
+QuickSort1Bench.measureQuickSort1  avgt    5  7,016 ± 3,465  us/op
+
+Benchmark                          Mode  Cnt    Score    Error  Units
+QuickSort2Bench.measureQuickSort2  avgt    5  239,370 ± 19,933  us/op

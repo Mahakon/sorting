@@ -33,7 +33,7 @@ public class CountingSortBench {
 
     @Setup(value = Level.Invocation)
     public void setUpInvocation() {
-        a = SortUtils.countingSortGenerateArray(1000);
+        a = SortUtils.countingSortGenerateArray(100);
     }
 
     @Benchmark

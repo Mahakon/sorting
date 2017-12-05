@@ -30,7 +30,7 @@ public class MergeSortBench {
 
     @Setup(value = Level.Invocation)
     public void setUpInvocation() {
-        a = SortUtils.myGenerateArray(1000);
+        a = SortUtils.myGenerateArray(100);
     }
 
     @Benchmark

@@ -62,11 +62,11 @@ public class HeapSort<Key extends Comparable<? super Key>> {
             rightChild = position * 2 + 2;
             smallestChild = position;
 
-            if (leftChild <= size && !greater(array[leftChild], array[smallestChild])) {
+            if (leftChild < size && greater(array[leftChild], array[smallestChild])) {
                 smallestChild = leftChild;
             }
 
-            if (rightChild <= size && !greater(array[rightChild], array[smallestChild])) {
+            if (rightChild < size && greater(array[rightChild], array[smallestChild])) {
                 smallestChild = rightChild;
             }
 
