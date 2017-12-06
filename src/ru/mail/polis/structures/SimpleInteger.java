@@ -8,16 +8,18 @@ public class SimpleInteger implements Numerical<SimpleInteger> {
 
     private static final int DIGIT_COUNT = 10;
 
-//    private final todo data;
-//    private final int length;
+    public final StringBuilder data;
+    private final int length;
 
     public SimpleInteger(Integer data) throws IllegalArgumentException {
         if (data == null) {
             throw new IllegalArgumentException("Source must be not null");
         }
-//        this.data = todo
-//        this.length = todo
+        this.data = getNumbers(data);
+        this.length = this.data.length();
     }
+
+
 
     @Override
     public int getDigit(int index) throws IndexOutOfBoundsException {
@@ -26,8 +28,7 @@ public class SimpleInteger implements Numerical<SimpleInteger> {
         } else if (index >= getDigitCount()) {
             return 0;
         } else {
-            //todo
-            return 0;
+            return Character.getNumericValue(data.charAt(index));
         }
     }
 
@@ -38,8 +39,17 @@ public class SimpleInteger implements Numerical<SimpleInteger> {
 
     @Override
     public int getDigitCount() {
-        //todo
-        return 0;
+        return length;
+    }
+
+    private StringBuilder getNumbers(Integer num) {
+        StringBuilder str = new StringBuilder();
+
+        for(int a = num; a > 0; a /= 10) {
+            str.insert(0,a % 10);
+        }
+
+        return str;
     }
 
     @Override

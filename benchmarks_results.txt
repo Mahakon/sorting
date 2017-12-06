@@ -12,3 +12,6 @@ QuickSort1Bench.measureQuickSort1  avgt    5  7,016 ± 3,465  us/op
 
 Benchmark                          Mode  Cnt    Score    Error  Units
 QuickSort2Bench.measureQuickSort2  avgt    5  239,370 ± 19,933  us/op
+
+Benchmark            Mode  Cnt   Score   Error  Units
+LSDBench.measureLSD  avgt    5  85,581 ± 3,390  us/op
